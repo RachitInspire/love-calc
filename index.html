@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Love Calculator</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            background-color: pink;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border: none;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>💖 Love Calculator 💖</h1>
+
+    <form https://formspree.io/f/xvzbqeal method="POST" id="loveForm">
+        <input type="text" name="yourName" placeholder="Your Name" required><br>
+        <input type="text" name="crushName" placeholder="Crush Name" required><br>
+        <button type="submit" onclick="calculateLove()">Calculate Love</button>
+    </form>
+
+    <h2 id="result"></h2>
+
+    <script>
+        function calculateLove() {
+            event.preventDefault();
+            
+            var lovePercent = Math.floor(Math.random() * 101);
+            document.getElementById("result").innerHTML =
+                "Your Love Compatibility is " + lovePercent + "% 💘";
+
+            document.getElementById("loveForm").submit();
+        }
+    </script>
+
+</body>
+</html>
